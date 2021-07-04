@@ -10,7 +10,14 @@
 </select>
 
 <mat-list role="list">
-  <mat-list-item role="listitem" *ngFor="let world of worlds" [routerLink]="['/worlds', world.name]" routerLinkActive="router-link-active">
-    {{world.name}} - {{world.location}} - {{world.worldtype}}
-  </mat-list-item>
+  <mat-list>
+    <mat-list-item *ngFor="let world of worlds" [routerLink]="['/worlds', world.name]" routerLinkActive="router-link-active">
+      <img matListAvatar src="assets/open_pvp.gif">
+      <h3 matLine> {{world.name}} </h3>
+      <p matLine>
+        <span> {{world.location}} </span>
+        <span class="demo-2"> - {{world.worldtype}} </span>
+      </p>
+    </mat-list-item>
+  </mat-list>
 </mat-list>

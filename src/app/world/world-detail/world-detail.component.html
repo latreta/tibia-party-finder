@@ -3,5 +3,13 @@
 Jogadores online
 
 <mat-list role="list">
-  <mat-list-item role="listitem" *ngFor="let player of onlinePlayers">{{player.name}} - {{player.level}} - {{player.vocation}}</mat-list-item>
+  <!-- <mat-list-item role="listitem" *ngFor="let player of onlinePlayers">{{player.name}} - {{player.level}} - {{player.vocation}}</mat-list-item> -->
+  <mat-list-item *ngFor="let player of onlinePlayers">
+    <!-- <img matListAvatar src="assets/open_pvp.gif"> -->
+    <h3 matLine> {{player.name}} </h3>
+    <p matLine>
+      <span> Level {{player.level}} </span>
+      <span class="demo-2"> - {{player.vocation}} </span>
+    </p>
+  </mat-list-item>
 </mat-list>
