@@ -3,10 +3,10 @@ import { TibiaService } from 'src/app/core/tibia.service';
 
 @Component({
   selector: 'app-worldlist',
-  templateUrl: './worldlist.component.html',
-  styleUrls: ['./worldlist.component.css']
+  templateUrl: './world-list.component.html',
+  styleUrls: ['./world-list.component.css']
 })
-export class WorldlistComponent implements OnInit {
+export class WorldListComponent implements OnInit {
   worlds = [];
 
   constructor(private tibiaService: TibiaService){
@@ -23,7 +23,7 @@ export class WorldlistComponent implements OnInit {
   }
 
   onChange = ($event) => {
-    console.dir($event.target);
+    alert($event.target.value);
   }
 
 }

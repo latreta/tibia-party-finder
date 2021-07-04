@@ -7,20 +7,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { WorldDetailComponent } from './world/world-detail/world-detail.component';
+import { WorldListComponent } from './world/world-list/world-list.component';
+import { AppRoutingModule } from './app-routing.module';
 
-import { WorldlistComponent } from './world/worldlist/worldlist.component';
-import { WorlddetailComponent } from './world/worlddetail/worlddetail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WorldlistComponent,
-    WorlddetailComponent
+    WorldListComponent,
+    WorldDetailComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    AppRoutingModule,
     MatListModule,
     MatToolbarModule
   ],

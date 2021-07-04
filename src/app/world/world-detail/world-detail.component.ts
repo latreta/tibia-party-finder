@@ -1,19 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { TibiaService } from 'src/app/core/tibia.service';
 
 @Component({
   selector: 'app-worlddetail',
-  templateUrl: './worlddetail.component.html',
-  styleUrls: ['./worlddetail.component.css']
+  templateUrl: './world-detail.component.html',
+  styleUrls: ['./world-detail.component.css']
 })
-export class WorlddetailComponent implements OnInit {
-  worldName = 'Descubra';
+export class WorldDetailComponent implements OnInit {
+  worldName = '';
   onlinePlayers = [];
   world = {};
 
-  constructor(private tibiaService: TibiaService) { }
+  constructor(private tibiaService: TibiaService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.worldName = this.route.snapshot.paramMap.get('worldName') || '';
     this.RetrieveSelectedWorld(this.worldName);
   }
 
