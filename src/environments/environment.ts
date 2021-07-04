@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  TIBIA_API_URL: 'https://api.tibiadata.com',
+  CURRENT_API_VERSION: 'v2'
 };
 
 /*

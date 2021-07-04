@@ -1,0 +1,7 @@
+<h2>{{worldName}}</h2>
+
+Jogadores online
+
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let player of onlinePlayers">{{player.name}} - {{player.level}} - {{player.vocation}}</mat-list-item>
+</mat-list>

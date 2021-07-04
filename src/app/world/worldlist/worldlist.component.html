@@ -1,0 +1,13 @@
+<h3>Lista de Mundos</h3>
+
+<select (change)="onChange($event)">
+  <option value="All">Todos</option>
+  <option value="Open PvP">Open PvP</option>
+  <option value="Optional PvP">Optional PvP</option>
+  <option value="Retro Open PvP">Retro Open PvP</option>
+  <option value="Retro Hardcore PvP">Retro Hardcore PvP</option>
+  <option value="Hardcore PvP">Hardcore PvP</option>
+</select>
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let world of worlds">{{world.name}} - {{world.location}} - {{world.worldtype}}</mat-list-item>
+</mat-list>
