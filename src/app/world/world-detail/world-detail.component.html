@@ -1,10 +1,17 @@
-<h2>{{worldName}}</h2>
+<h2 style="text-transform: capitalize;">{{worldName}}</h2>
+
+<select (change)="onChange($event)">
+  <option value="">Todos</option>
+  <option value="Knight">Knight</option>
+  <option value="Paladin">Paladin</option>
+  <option value="Druid">Druid</option>
+  <option value="Sorcerer">Sorcerer</option>
+</select>
 
 Jogadores online
 
 <mat-list role="list">
-  <!-- <mat-list-item role="listitem" *ngFor="let player of onlinePlayers">{{player.name}} - {{player.level}} - {{player.vocation}}</mat-list-item> -->
-  <mat-list-item *ngFor="let player of onlinePlayers">
+  <mat-list-item *ngFor="let player of onlinePlayers | filter: 'vocation' : vocation">
     <!-- <img matListAvatar src="assets/open_pvp.gif"> -->
     <h3 matLine> {{player.name}} </h3>
     <p matLine>

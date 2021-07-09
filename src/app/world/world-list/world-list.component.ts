@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TibiaService } from 'src/app/core/tibia.service';
+import { WorldService } from 'src/app/core/services/world.service';
 
 @Component({
   selector: 'app-worldlist',
@@ -8,8 +8,9 @@ import { TibiaService } from 'src/app/core/tibia.service';
 })
 export class WorldListComponent implements OnInit {
   worlds = [];
+  typeWorld = '';
 
-  constructor(private tibiaService: TibiaService){
+  constructor(private worldService: WorldService){
   }
 
   ngOnInit(): void {
@@ -17,13 +18,13 @@ export class WorldListComponent implements OnInit {
   }
 
   RetrieveListOfWorlds = () => {
-    this.tibiaService.GetWorlds().subscribe((data: any) => {
+    this.worldService.GetWorlds().subscribe((data: any) => {
       this.worlds = data.worlds.allworlds;
     }, err => console.error(err));
   }
 
   onChange = ($event) => {
-    alert($event.target.value);
+    this.typeWorld = $event.target.value;
   }
 
 }

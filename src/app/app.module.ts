@@ -10,13 +10,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { WorldDetailComponent } from './world/world-detail/world-detail.component';
 import { WorldListComponent } from './world/world-list/world-list.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FilterPipe } from './core/pipes/filter.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WorldListComponent,
-    WorldDetailComponent
+    WorldDetailComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

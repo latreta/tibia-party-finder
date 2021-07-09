@@ -2,16 +2,16 @@
 
 <select (change)="onChange($event)">
   <option value="">Todos</option>
-  <option value="Open PvP">Open PvP</option>
-  <option value="Optional PvP">Optional PvP</option>
-  <option value="Retro Open PvP">Retro Open PvP</option>
-  <option value="Retro Hardcore PvP">Retro Hardcore PvP</option>
-  <option value="Hardcore PvP">Hardcore PvP</option>
+  <option value="Open Pvp">Open PvP</option>
+  <option value="Optional Pvp">Optional PvP</option>
+  <option value="Retro Open Pvp">Retro Open PvP</option>
+  <option value="Retro Hardcore Pvp">Retro Hardcore PvP</option>
+  <option value="Hardcore Pvp">Hardcore PvP</option>
 </select>
 
 <mat-list role="list">
   <mat-list>
-    <mat-list-item *ngFor="let world of worlds" [routerLink]="['/worlds', world.name]" routerLinkActive="router-link-active">
+    <mat-list-item *ngFor="let world of worlds | filter: 'worldtype': typeWorld" [routerLink]="['/worlds', world.name]" routerLinkActive="router-link-active">
       <img matListAvatar src="assets/open_pvp.gif">
       <h3 matLine> {{world.name}} </h3>
       <p matLine>

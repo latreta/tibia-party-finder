@@ -1,0 +1,9 @@
+{
+    "information": {},
+    "worlds": {
+        "allworlds" :[
+            {"name": "Descubra", "location": "South America", "worldtype": "Optional Pvp"},
+            {"name": "Teste", "location": "South America", "worldtype": "Open Pvp"}
+        ]
+    }
+}

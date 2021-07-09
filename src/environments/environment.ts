@@ -5,6 +5,8 @@
 export const environment = {
   production: false,
   TIBIA_API_URL: 'https://api.tibiadata.com',
+  MOCK_URL: 'assets',
+  IS_MOCK_DISABLED: false,
   CURRENT_API_VERSION: 'v2'
 };
 
