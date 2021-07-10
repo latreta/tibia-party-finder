@@ -11,6 +11,8 @@ import { WorldDetailComponent } from './world/world-detail/world-detail.componen
 import { WorldListComponent } from './world/world-list/world-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FilterPipe } from './core/pipes/filter.pipe';
+import { WorldCardComponent } from './world/world-card/world-card.component';
+import { PlayerCardComponent } from './world/player-card/player-card.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { FilterPipe } from './core/pipes/filter.pipe';
     AppComponent,
     WorldListComponent,
     WorldDetailComponent,
-    FilterPipe
+    FilterPipe,
+    WorldCardComponent,
+    PlayerCardComponent
   ],
   imports: [
     BrowserModule,

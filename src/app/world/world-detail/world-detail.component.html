@@ -7,16 +7,9 @@
   <option value="Druid">Druid</option>
   <option value="Sorcerer">Sorcerer</option>
 </select>
-
+<br>
 Jogadores online
 
 <mat-list role="list">
-  <mat-list-item *ngFor="let player of onlinePlayers | filter: 'vocation' : vocation">
-    <!-- <img matListAvatar src="assets/open_pvp.gif"> -->
-    <h3 matLine> {{player.name}} </h3>
-    <p matLine>
-      <span> Level {{player.level}} </span>
-      <span class="demo-2"> - {{player.vocation}} </span>
-    </p>
-  </mat-list-item>
+  <app-player-card [player]="player" *ngFor="let player of onlinePlayers | filter: 'vocation' : vocation"></app-player-card>
 </mat-list>

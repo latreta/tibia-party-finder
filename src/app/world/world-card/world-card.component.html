@@ -1,0 +1,12 @@
+<mat-list-item [routerLink]="['/worlds', world.name]">
+  <img matListAvatar src="assets/open_pvp.gif" *ngIf="world.worldtype == 'Open PvP'">
+  <img matListAvatar src="assets/optional_pvp.gif" *ngIf="world.worldtype == 'Optional PvP'">
+  <img matListAvatar src="assets/retro_open_pvp.gif" *ngIf="world.worldtype == 'Retro Open PvP'">
+  <img matListAvatar src="assets/retrohardcore_pvp.gif" *ngIf="world.worldtype == 'Retro Hardcore PvP'">
+  <img matListAvatar src="assets/hardcore_pvp.gif" *ngIf="world.worldtype == 'Hardcore PvP'">
+  <h3 matLine> {{world.name}} </h3>
+  <p matLine>
+    <span> {{world.location}} </span>
+    <span class="demo-2"> - {{world.worldtype}} </span>
+  </p>
+</mat-list-item>

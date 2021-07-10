@@ -14,7 +14,6 @@ export class WorldService {
   }
 
   GetWorld(worldName: string) {
-    return this.http.get<any>(`${this.apiService.ENDPOINT_URL}/specific_world.json`);
     return this.http.get<any>(`${this.apiService.ENDPOINT_URL}/world/${worldName}.json`);
   }
 }
