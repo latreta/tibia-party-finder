@@ -10,6 +10,6 @@
 
 <mat-list role="list">
   <mat-list>
-    <app-world-card *ngFor="let world of worlds" [world]="world"></app-world-card>
+    <app-world-card *ngFor="let world of worlds | filter: 'worldtype' : typeWorld" [world]="world"></app-world-card>
   </mat-list>
 </mat-list>
