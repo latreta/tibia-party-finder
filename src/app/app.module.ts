@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatListModule} from '@angular/material/list';
+import {MatSelectModule} from '@angular/material/select';
+import {MatGridListModule} from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { WorldDetailComponent } from './world/world-detail/world-detail.component';
 import { WorldListComponent } from './world/world-list/world-list.component';
@@ -29,6 +31,8 @@ import { PlayerCardComponent } from './world/player-card/player-card.component';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    MatGridListModule,
+    MatSelectModule,
     MatListModule,
     MatToolbarModule
   ],

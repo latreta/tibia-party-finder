@@ -14,7 +14,6 @@ export class FilterPipe implements PipeTransform {
     }
 
     value.forEach(item => {
-      console.log(item, columnFilter, valueFilter);
       if(item[columnFilter].search(valueFilter) !== -1){
         filteredResults.push(item);
       }

@@ -29,8 +29,8 @@ export class WorldDetailComponent implements OnInit {
     });
   }
 
-  onChange = ($event) => {
-    this.vocation = $event.target.value;
+  onChange = (event) => {
+    this.vocation = event.value || '';
   }
 
 }

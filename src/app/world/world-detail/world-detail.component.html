@@ -1,15 +1,25 @@
-<h2 style="text-transform: capitalize;">{{worldName}}</h2>
+<div style="margin:30px;">
 
-<select (change)="onChange($event)">
-  <option value="">Todos</option>
-  <option value="Knight">Knight</option>
-  <option value="Paladin">Paladin</option>
-  <option value="Druid">Druid</option>
-  <option value="Sorcerer">Sorcerer</option>
-</select>
-<br>
-Jogadores online
+  <h1 style="text-transform: capitalize;">{{worldName}}</h1>
 
-<mat-list role="list">
-  <app-player-card [player]="player" *ngFor="let player of onlinePlayers | filter: 'vocation' : vocation"></app-player-card>
-</mat-list>
+  <div style="margin:25px 25px;">
+    
+    <mat-select (selectionChange)="onChange($event)">
+      <mat-option value="">Todos</mat-option>
+      <mat-option value="Knight">Knight</mat-option>
+      <mat-option value="Paladin">Paladin</mat-option>
+      <mat-option value="Druid">Druid</mat-option>
+      <mat-option value="Sorcerer">Sorcerer</mat-option>
+    </mat-select>
+  </div>
+
+  <div style="margin:40px;">
+    <h2 style="padding:15px;">Jogadores online</h2>
+
+    <mat-grid-list cols="3" rowHeight="3:1">
+      <mat-grid-tile *ngFor="let player of onlinePlayers | filter : 'vocation' : vocation">
+        <app-player-card [player]="player"></app-player-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
